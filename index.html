@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Laboratorio #3</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Laboratorio #3</h1>
+    </header>
+
+    <main>
+        <div class="container-generate">
+            <div class="container-form">
+                <h1>Formulario de Registro</h1>
+                <form id="user-form">
+                    <div class="form-group">
+                        <label for="username">Nombre</label>
+                        <input type="text" name="username" id="username" placeholder="Ingrese el nombre">
+                        <p class="error-message" id="name-error"></p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" name="email" id="email" placeholder="Ingrese el correo">
+                        <p class="error-message" id="email-error"></p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">Edad</label>
+                        <input type="number" name="age" id="age" placeholder="Ingrese la edad">
+                        <p class="error-message" id="age-error"></p>
+                    </div>
+                    
+                    <button type="submit" id="add-user-btn" class="btn">Agregar Usuario</button>
+                </form>
+            </div>
+
+            <div class="container-users">
+                <h1>Usuarios Registrados <span id="user-count">(0)</span></h1>
+                <div id="no-users-message" class="alert">
+                    No hay usuarios registrados. Agrega uno usando el formulario.
+                </div>
+                <div id="users-container"></div>
+            </div>
+        </div>
+        
+        <div id="data-visualization" class="container-data-viz hidden">
+            <h1>Visualización de Datos</h1>
+            <div class="tabs">
+                <div class="tabs-header">
+                    <button id="json-tab" class="tab-btn active">JSON</button>
+                    <button id="xml-tab" class="tab-btn">XML</button>
+                </div>                <div class="tabs-content">
+                    <div id="json-content" class="tab-content active">
+                        <div class="content-header">
+                            <pre id="json-preview"></pre>
+                            <button id="copy-json" class="copy-btn" aria-label="Copiar JSON">
+                                <img src="https://img.icons8.com/?size=100&id=86206&format=png&color=000000" alt="Copiar">
+                            </button>
+                        </div>
+                        <button id="export-json" class="btn">Exportar como JSON</button>
+                    </div>
+                    <div id="xml-content" class="tab-content">
+                        <div class="content-header">
+                            <pre id="xml-preview"></pre>
+                            <button id="copy-xml" class="copy-btn" aria-label="Copiar XML">
+                                <img src="https://img.icons8.com/?size=100&id=86206&format=png&color=000000" alt="Copiar">
+                            </button>
+                        </div>
+                        <button id="export-xml" class="btn">Exportar como XML</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <h2 class="footer-title">Integrantes/</h2>
+            <div class="team-members">
+              ├─ <span class="team-member">Brandon Carrillo Álvarez</span><br />
+              ├─ <span class="team-member">Akion Cheng Jimenez</span><br />
+              ├─ <span class="team-member">José David Guadamuz Elizondo</span><br />
+              ├─ <span class="team-member">Keirin Obando Duarte</span><br />
+              └─ <span class="team-member">Oscar Andrés Zúñiga Sánchez</span>
+            </div>
+            
+            <div class="footer-links">
+                <div class="links-container">
+                    <span>Patent Pledge</span>
+                    <span class="separator">-</span>
+                    <span>Terms of Use</span>
+                    <span class="separator">-</span>
+                    <span>Privacy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

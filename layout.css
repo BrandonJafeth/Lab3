@@ -1,0 +1,102 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Form and users container layout */
+.container-generate {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* Data visualization container layout */
+.container-data-viz {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+    .container-generate {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Larger screens */
+@media (min-width: 1024px) {
+    .container-generate {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+}
+
+/* User card layout */
+.user-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    flex: 1;
+}
+
+/* Form group layout */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+/* Tabs layout */
+.tabs {
+    width: 100%;
+}
+
+.tabs-header {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.tab-content {
+    width: 100%;
+}
+
+/* Users container max height with scrolling */
+.container-users > #users-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+/* Scrollbar styling */
+.container-users > #users-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.container-users > #users-container::-webkit-scrollbar-track {
+    background: #001c27;
+    border-radius: 10px;
+}
+
+.container-users > #users-container::-webkit-scrollbar-thumb {
+    background: #05e6f2;
+    border-radius: 10px;
+}
+
+.container-users > #users-container::-webkit-scrollbar-thumb:hover {
+    background: #04bdc6;
+}
