@@ -20,7 +20,7 @@ main {
     flex-direction: column;
     gap: 2rem;
     width: 100%;
-    min-height: calc(100vh - 200px); /* Ensure enough space for content */
+    min-height: calc(100vh - 200px); 
 }
 
 .container-generate {
