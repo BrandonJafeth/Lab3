@@ -2,10 +2,16 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Inter", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 main {
@@ -13,29 +19,33 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    width: 100%;
+    min-height: calc(100vh - 200px); /* Ensure enough space for content */
 }
 
-/* Form and users container layout */
 .container-generate {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    width: 100%;
 }
 
-/* Data visualization container layout */
 .container-data-viz {
     width: 100%;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Responsive layout */
+
 @media (min-width: 768px) {
     .container-generate {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-/* Larger screens */
+
 @media (min-width: 1024px) {
     .container-generate {
         grid-template-columns: 1fr 1fr;
@@ -43,7 +53,7 @@ main {
     }
 }
 
-/* User card layout */
+
 .user-card {
     display: flex;
     justify-content: space-between;
@@ -54,35 +64,38 @@ main {
     flex: 1;
 }
 
-/* Form group layout */
+
 .form-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.25rem;
 }
 
-/* Tabs layout */
+
 .tabs {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .tabs-header {
     display: flex;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
 .tab-content {
     width: 100%;
+    overflow-x: auto;
 }
 
-/* Users container max height with scrolling */
+
 .container-users > #users-container {
     max-height: 400px;
     overflow-y: auto;
     padding-right: 0.5rem;
 }
 
-/* Scrollbar styling */
 .container-users > #users-container::-webkit-scrollbar {
     width: 6px;
 }
